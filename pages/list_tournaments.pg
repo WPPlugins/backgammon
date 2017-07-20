@@ -1,0 +1,39 @@
+<table Xfhkid="tournamentslist" class="listbgtournaments">
+<tbody>
+  <tr>
+    <td style="text-align:left;white-space:nowrap"> </td>
+    <td style="text-align:left;white-space:nowrap">Start Time</td>
+    <td style="text-align:left;white-space:nowrap">Players</td>
+    <td style="text-align:left;white-space:nowrap">Type</td>
+    <td style="text-align:left;white-space:nowrap">Coins</td>
+    <td style="text-align:left;white-space:nowrap">ELO Min.</td>
+    <td style="text-align:left;white-space:nowrap">Estimated Time</td>
+    <td style="text-align:left;white-space:nowrap">Club Only</td>
+  </tr>
+  <tr Xtournamentid="@@TID@@" Xtournamentname="@@NAME@@" Xclubname="@@CLUBNAME@@" Xisfull="@@MAXPLAYERS@@">
+    <td style="vertical-align:middle;text-align:center;white-space:nowrap" class="join"><div class="simpleclick" title="Click to Join this tournament" Xclick="join:@@TID@@">Join</div></td>
+    <td style="vertical-align:top;text-align:left;white-space:nowrap">@@STARTTIME@@</td>
+    <td style="vertical-align:top;text-align:left;white-space:nowrap">@@PLAYERS@@</td>
+    <td style="vertical-align:top;text-align:left;white-space:nowrap">@@TYPE@@</td>
+    <td style="vertical-align:top;text-align:left;white-space:nowrap">@@COINS@@</td>
+    <td style="vertical-align:top;text-align:left;white-space:nowrap">@@MINELO@@</td>
+    <td style="vertical-align:top;text-align:left;white-space:nowrap">@@ESTTIME@@</td>
+    <td style="vertical-align:top;text-align:left;white-space:nowrap">@@SCOPE@@</td>
+  </tr>
+  <tr style="display:none" Xfhkid="jointournament_@@TID@@" Xjointourney="1" class="tournamentdetails">
+    <td colspan="8" style="text-align:left">
+      @@FULLSPECS@@<br>
+      To participate in this tournament, click the link below to connect to www.SimplyBG.com to login and register for this tournament.<br>
+      <a href="http://www.SimplyBG.com/tournament/join/@@TID@@">Click HERE</a> to participate,  you will be redirected to
+      <a href="http://www.SimplyBG.com/tournament/join/@@TID@@">http://www.SimplyBG.com/tournament/join/@@TID@@</a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="8" style="text-align:left"><strong>Title:</strong> @@TITLE@@</td>
+  </tr>
+  <tr>
+    <td colspan="8" style="text-align:left"><strong>Description:</strong><br>@@DESCRIPTION@@</td>
+  </tr>
+  <tr><td colspan="8" style="text-align:left;padding:1px;margin:1px;font-size:1px">&nbsp;</td></tr>
+</tbody>
+</table>

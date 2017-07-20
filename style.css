@@ -1,0 +1,90 @@
+.listbgtournaments {
+margin:0px;padding:0px;
+width:100%;	box-shadow: 10px 10px 5px #888888;
+border:1px solid #000000;
+border-collapse:unset;
+
+-moz-border-radius-bottomleft:10.2px;
+-webkit-border-bottom-left-radius:10.2px;
+border-bottom-left-radius:10.2px;
+
+-moz-border-radius-bottomright:10.2px;
+-webkit-border-bottom-right-radius:10.2px;
+border-bottom-right-radius:10.2px;
+
+-moz-border-radius-topright:10.2px;
+-webkit-border-top-right-radius:10.2px;
+border-top-right-radius:10.2px;
+
+-moz-border-radius-topleft:10.2px;
+-webkit-border-top-left-radius:10.2px;
+border-top-left-radius:10.2px;
+}.listbgtournaments table{
+width:100%;
+height:100%;
+margin:0px;padding:0px;
+}.listbgtournaments tr:last-child td:last-child {
+-moz-border-radius-bottomright:10.2px;
+-webkit-border-bottom-right-radius:10.2px;
+border-bottom-right-radius:10.2px;
+}
+.listbgtournaments table tr:first-child td:first-child {
+-moz-border-radius-topleft:10.2px;
+-webkit-border-top-left-radius:10.2px;
+border-top-left-radius:10.2px;
+}
+.listbgtournaments table tr:first-child td:last-child {
+-moz-border-radius-topright:10.2px;
+-webkit-border-top-right-radius:10.2px;
+border-top-right-radius:10.2px;
+}.listbgtournaments tr:last-child td:first-child{
+-moz-border-radius-bottomleft:10.2px;
+-webkit-border-bottom-left-radius:10.2px;
+border-bottom-left-radius:10.2px;
+}.listbgtournaments tr:hover td{
+background-color:#ffffff;
+}
+.listbgtournaments tr.tournamentdetails, .listbgtournaments tr.tournamentdetails td{
+background-color:#fbfbfb;
+color:#000000;
+font-size:14px;
+}
+.listbgtournaments td{
+vertical-align:middle;
+background-color:#e5e5e5;
+border:1px solid #b4b4b4;
+border-width:0px 1px 1px 0px;
+text-align:left;
+padding:5px;
+font-size:12px;
+font-family:Arial;
+font-weight:normal;
+color:#000000;
+}.listbgtournaments tr:last-child td{
+border-width:0px 1px 0px 0px;
+}.listbgtournaments tr td:last-child{
+border-width:0px 0px 1px 0px;
+}.listbgtournaments tr:last-child td:last-child{
+border-width:0px 0px 0px 0px;
+}
+.listbgtournaments tr:first-child td{
+	background:-o-linear-gradient(bottom, #4c4c4c 5%, #000000 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4c4c4c), color-stop(1, #000000) );	background:-moz-linear-gradient( center top, #4c4c4c 5%, #000000 100% );	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#4c4c4c", endColorstr="#000000");	background: -o-linear-gradient(top,#4c4c4c,000000);
+background-color:#4c4c4c;
+border:0px solid #000000;
+text-align:center;
+border-width:0px 0px 1px 1px;
+font-size:12px;
+font-family:Arial;
+font-weight:bold;
+color:#ffffff;
+}
+.listbgtournaments tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #4c4c4c 5%, #000000 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4c4c4c), color-stop(1, #000000) );	background:-moz-linear-gradient( center top, #4c4c4c 5%, #000000 100% );	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#4c4c4c", endColorstr="#000000");	background: -o-linear-gradient(top,#4c4c4c,000000);
+background-color:#4c4c4c;
+}
+.listbgtournaments tr:first-child td:first-child{
+border-width:0px 0px 1px 0px;
+}
+.listbgtournaments tr:first-child td:last-child{
+border-width:0px 0px 1px 1px;
+}

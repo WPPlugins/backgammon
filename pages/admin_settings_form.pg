@@ -1,0 +1,27 @@
+<br>
+<div Xfhkid="backgammon_admin_settings" style="display:inline-block">
+  <h2>Backgammon Settings</h2>
+  <span Xfhkid="messagetop"></span>
+  <form method="post">
+    <label style="display:inline-block;text-align:right;width:150px;vertical-align:top;margin-top:4px" for="startdate">Default Time Zone:</label> @@TIMEZONES@@<br>
+    <span>Tournaments times are shown in this seleted timezone.</span>
+    <br><br><input type="hidden" name="backgammon_fhk_admin_post_settings" value="yes" /><input class="button" type="submit" value="Save" /><br>
+  </form>
+</div>
+
+<style>
+  .timezoneselector { width: 350px; }
+</style>
+
+<script type="text/javascript">
+window.backgammon_admin_settings_form_jso = {
+  onload: function() {
+  },
+  end: 'end'
+};
+jQuery(document).ready(function() {
+  jQuery('DIV[Xfhkid="backgammon_admin_settings"] SELECT[name="timezoneselector"]').val('@@DEFAULTTIMEZONE@@');
+  window.backgammon_admin_settings.onload();
+});
+</script>
+

@@ -1,0 +1,117 @@
+<input type="button" value="New Tournament" class="button" onclick="this.style.display='none';jQuery('DIV[Xfhkid=backgammon_new_tournament]').css('display','inline-block');return false;">
+<br>
+<div Xfhkid="backgammon_new_tournament" style="display:none">
+  <div style="margin:5px;display:block;border-top:1px solid black;height:1px;width:100%"></div>
+  <h2>Create New Tournament</h2>
+  <form method="post">
+    <label class="llable1" for="name">Name:</label>
+    <input type="text" name="name" maxlength="25" placeholder="25 chars, unique" style="width:400px" /><br>
+
+    <label class="llable1" for="title">Title:</label>
+    <input type="text" name="title" maxlength="150" placeholder="max length 150" style="width:400px" /><br>
+
+    <label class="llable1" for="startdate">Start Date/Time:</label>
+    <input Xfhkfunc="datepicker" type="text" name="startdate" maxlength="30" placeholder="click to select date" style="width:100px" /> @ <input Xfhkfunc="timepicker" type="text" name="starttime" maxlength="30" placeholder="click to select time" style="width:100px" />  @@TIMEZONES@@<br>
+
+    <label class="llable1" for="description">Description:</label>
+    <textarea name="description" maxlength="2000" style="width:400px" ></textarea><br>
+
+    <label class="llable1" for="ttype">Tournament Type:</label>
+    <select style="width:150px" name="ttype" onchange="this.blur()"><option value="2">Round Robin</option></select><br>
+
+    <label class="llable1" for="ttype">Minimum ELO:</label>
+    <select name="minelo" onchange="this.blur()" style="width:60px;text-align:center">
+      <option value="100">100</option>
+      <option value="500">500</option>
+      <option value="1000">1000</option>
+      <option value="1200">1200</option>
+      <option value="1501">1501</option>
+      <option value="1550">1550</option>
+      <option value="1600">1600</option>
+      <option value="1700">1700</option>
+      <option value="1800">1800</option>
+      <option value="1900">1900</option>
+    </select><br>
+
+    <label class="llable1" for="maxplayers">Max Players:</label>
+    <select name="maxplayers" style="width:60px;text-align:center"><option value="5">5</option><option value="8">8</option><option value="10">10</option><option value="15">15</option></select><br>
+
+    <label class="llable1" for="mlength">Match Length:</label>
+    <select name="mlength" style="width:60px;text-align:center" onchange="this.blur()">
+      <option>1</option><option selected="selected">3</option><option>5</option><option>7</option><option>9</option><option>11</option><option>15</option><option>21</option>
+    </select><br>
+
+    <label class="llable1" for="mtype">Match Type:</label>
+    <select name="mtype" style="width:250px" onchange="this.blur()">
+      <option value="1">with Crawford rule</option>
+      <option value="2">without Crawford rule</option>
+      <option value="3">Money Play rules</option>
+    </select><br>
+
+    <label class="llable1" for="stype">Game Start Type:</label>
+    <select name="stype" style="width:250px" onchange="this.blur()">
+      <option value="0">Normal backgammon start</option>
+      <option value="1">Longgammon</option>
+      <option value="2">Nackgammon</option>
+      <option value="3">Hypergammon</option>
+    </select><br>
+
+    <label class="llable1" for="dcubemode">Double Cube:</label>
+    <select name="dcubemode" style="width:250px" onchange="this.blur()">
+      <option value="0">No Doubling</option>
+      <option selected="selected" value="1">Double &amp; Redouble</option>
+      <option value="2">Double, but no Redouble</option>
+    </select><br>
+
+    <label class="llable1" for="isprivate">Private Matches:</label>
+    <select name="isprivate" style="width:60px;text-align:center" onchange="this.blur()">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </select><br>
+
+    <label class="llable1" for="scope">Tournament Scope:</label>
+    <select name="scope" style="width:150px" onchange="this.blur()">
+      <option value="0">Public</option>
+      <option value="1">Club Members Only</option>
+    </select><br>
+
+    <input type="hidden" name="backgammon_fhk_admin_post_new_tournament" value="yes" /><input class="button" type="submit" value="Create" /><br>
+  </form>
+</div>
+
+<style>
+  .timezoneselector { width: 150px; }
+  .llable1 { display:inline-block;text-align:right;width:150px;vertical-align:top;margin-top:4px; }
+</style>
+<script type="text/javascript">
+window.backgammon_new_tournament_form_jso = {
+  clickbinder: function(o,e) {
+    var a = o.getAttribute('Xclick').split(/:/);
+    if ( a[0] == 'edit' ) window.backgammon_new_tournament_form_jso.editclick(o,e,a[1]);
+    else if ( a[0] == 'delete' ) window.backgammon_new_tournament_form_jso.deleteclick(o,e,a[1]);
+  },
+  editclick: function(o,e,n) {
+    var f = jQuery('FORM[Xfhkid="listoftournaments"]').get(0);
+    f.elements.backgammon_fhk_admin_post_slope9.value = 'edit ' + n;
+    f.submit();
+  },
+  deleteclick: function(o,e,n) {
+    if ( ! window.confirm('Delete this tournament. Are you sure?') ) return;
+    var f = jQuery('FORM[Xfhkid="listoftournaments"]').get(0);
+    f.elements.backgammon_fhk_admin_post_slope9.value = 'delete ' + n;
+    f.submit();
+  }
+};
+jQuery(document).ready(function() {
+  jQuery('DIV[Xfhkid="backgammon_new_tournament"] INPUT[Xfhkfunc="datepicker"]').datepicker({
+    dateFormat: 'yy-mm-dd',
+    minDate: new Date()
+  });
+  jQuery('DIV[Xfhkid="backgammon_new_tournament"] INPUT[Xfhkfunc="timepicker"]').timepicker({
+    'scrollDefault': 'now'
+  });
+  jQuery('DIV[Xfhkid="backgammon_new_tournament"] SELECT[name="timezoneselector"]').val('@@DEFAULTTIMEZONE@@');
+  jQuery('FORM[Xfhkid="listoftournaments"] DIV[Xclick]').on('click',function(e) { window.backgammon_new_tournament_form_jso.clickbinder(this,e);});
+});
+</script>
+
